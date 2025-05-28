@@ -25,7 +25,7 @@ const resetGame = () => {
   showMessage("🔄 Game has been reset!", "bg-blue-600");
 };
 
-// Soft reset on New Ascertain that the game is over
+// Soft reset on New Game only if game is over
 const handleNewGame = () => {
   const allEmpty = [...boxes].every((box) => box.innerText === "");
 
@@ -59,8 +59,8 @@ const showMessage = (text, colorClass = "bg-indigo-600") => {
 
 // Check winner or draw
 const checkWinner = () => {
-  const playerX = sessionStorage.getItem('playerX') || "Player X";
-  const playerO = sessionStorage.getItem('playerO') || "Player O";
+  const playerX = localStorage.getItem('playerX') || "Player X";
+  const playerO = localStorage.getItem('playerO') || "Player O";
 
   for (let pattern of winPatterns) {
     const [a, b, c] = pattern;
@@ -84,6 +84,7 @@ const checkWinner = () => {
   }
 };
 
+
 // Handle box clicks
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
@@ -100,20 +101,37 @@ boxes.forEach((box) => {
 newGameButton.addEventListener("click", handleNewGame);
 resetButton.addEventListener("click", resetGame);
 
+
 // When the page loads, check if the player names are already saved
 window.onload = function() {
-  const playerX = sessionStorage.getItem('playerX');
-  const playerO = sessionStorage.getItem('playerO');
+  const playerX = localStorage.getItem('playerX');
+  const playerO = localStorage.getItem('playerO');
+  const playerFormContainer = document.getElementById('playerFormContainer');
 
+  // If player names are not saved, show the form
   if (!playerX || !playerO) {
-    window.location.href = "/"; // Redirect to landing.html if names are missing
+    playerFormContainer.classList.remove('hidden');
   }
-};
+}
+
+// Handling "Start Game" button click to save player names
+document.getElementById('startGameBtn').addEventListener('click', function() {
+  const playerX = document.getElementById('playerX').value;
+  const playerO = document.getElementById('playerO').value;
+
+  if (playerX && playerO) {
+    localStorage.setItem('playerX', playerX);
+    localStorage.setItem('playerO', playerO);
+    alert('Players saved! You can now view them.');
+  } else {
+    alert('Please enter both player names.');
+  }
+});
 
 // Handling "View Players" button click
 document.getElementById('viewPlayersBtn').addEventListener('click', function() {
-  const playerX = sessionStorage.getItem('playerX');
-  const playerO = sessionStorage.getItem('playerO');
+  const playerX = localStorage.getItem('playerX');
+  const playerO = localStorage.getItem('playerO');
 
   const msgContainer = document.getElementById('playerNamesMsg');
   
