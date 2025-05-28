@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 min-h-screen flex flex-col items-center justify-center text-white p-4 relative">
+
+  <!-- View Players Button - Fixed Top Right -->
+  <div class="fixed top-4 right-4 z-50">
+    <button id="viewPlayersBtn" class="bg-blue-500 hover:bg-blue-600 active:scale-95 text-white font-semibold px-4 py-2 rounded-lg shadow transition-all duration-200">
+      View Players
+    </button>
+  </div>
+
+  <div class="msg hidden text-xl font-semibold mb-6 px-4 py-2 bg-indigo-600 rounded-lg shadow-md" id="playerNamesMsg"></div>
+  <h1 class="text-5xl font-bold mb-10 text-indigo-400 drop-shadow-lg">Tic Tac Toe</h1>
+
+  <div class="layout grid grid-cols-3 gap-4 mb-8">
+    <!-- Game boxes -->
+    <button class="box w-24 h-24 bg-gray-700 text-3xl font-bold text-white rounded-lg shadow-inner hover:bg-indigo-500 active:scale-95 transition-all duration-200"></button>
+    <button class="box w-24 h-24 bg-gray-700 text-3xl font-bold text-white rounded-lg shadow-inner hover:bg-indigo-500 active:scale-95 transition-all duration-200"></button>
+    <button class="box w-24 h-24 bg-gray-700 text-3xl font-bold text-white rounded-lg shadow-inner hover:bg-indigo-500 active:scale-95 transition-all duration-200"></button>
+    <button class="box w-24 h-24 bg-gray-700 text-3xl font-bold text-white rounded-lg shadow-inner hover:bg-indigo-500 active:scale-95 transition-all duration-200"></button>
+    <button class="box w-24 h-24 bg-gray-700 text-3xl font-bold text-white rounded-lg shadow-inner hover:bg-indigo-500 active:scale-95 transition-all duration-200"></button>
+    <button class="box w-24 h-24 bg-gray-700 text-3xl font-bold text-white rounded-lg shadow-inner hover:bg-indigo-500 active:scale-95 transition-all duration-200"></button>
+    <button class="box w-24 h-24 bg-gray-700 text-3xl font-bold text-white rounded-lg shadow-inner hover:bg-indigo-500 active:scale-95 transition-all duration-200"></button>
+    <button class="box w-24 h-24 bg-gray-700 text-3xl font-bold text-white rounded-lg shadow-inner hover:bg-indigo-500 active:scale-95 transition-all duration-200"></button>
+    <button class="box w-24 h-24 bg-gray-700 text-3xl font-bold text-white rounded-lg shadow-inner hover:bg-indigo-500 active:scale-95 transition-all duration-200"></button>
+  </div>
+
+  <div class="flex gap-6">
+    <button class="NewGameButton bg-green-500 hover:bg-green-600 active:scale-95 text-white font-semibold px-6 py-2 rounded-lg shadow transition-all duration-200">
+      New Game
+    </button>
+    <button class="ResetButton bg-red-500 hover:bg-red-600 active:scale-95 text-white font-semibold px-6 py-2 rounded-lg shadow transition-all duration-200">
+      Reset
+    </button>
+  </div>
+
+  <!-- Form to enter player names -->
+  <div id="playerFormContainer" class="mt-8 hidden">
+    <input type="text" id="playerX" placeholder="Player X Name" class="w-full mb-4 p-2" />
+    <input type="text" id="playerO" placeholder="Player O Name" class="w-full mb-4 p-2" />
+    <button id="startGameBtn" class="bg-indigo-500 text-white px-4 py-2 rounded-lg">Start Game</button>
+  </div>
+
+  <script src="script.js">
+    </script>
+
+</body>
+</html>
