@@ -84,6 +84,7 @@ const checkWinner = () => {
   }
 };
 
+
 // Handle box clicks
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
@@ -100,17 +101,45 @@ boxes.forEach((box) => {
 newGameButton.addEventListener("click", handleNewGame);
 resetButton.addEventListener("click", resetGame);
 
-// Handling "View Players" button click
-document.getElementById('viewPlayersBtn').addEventListener('click', function () {
+
+// When the page loads, check if the player names are already saved
+window.onload = function() {
   const playerX = localStorage.getItem('playerX');
   const playerO = localStorage.getItem('playerO');
-  const msgContainer = document.getElementById('playerNamesMsg');
+  const playerFormContainer = document.getElementById('playerFormContainer');
 
+  // If player names are not saved, show the form
+  if (!playerX || !playerO) {
+    playerFormContainer.classList.remove('hidden');
+  }
+}
+
+// Handling "Start Game" button click to save player names
+document.getElementById('startGameBtn').addEventListener('click', function() {
+  const playerX = document.getElementById('playerX').value;
+  const playerO = document.getElementById('playerO').value;
+
+  if (playerX && playerO) {
+    localStorage.setItem('playerX', playerX);
+    localStorage.setItem('playerO', playerO);
+    alert('Players saved! You can now view them.');
+  } else {
+    alert('Please enter both player names.');
+  }
+});
+
+// Handling "View Players" button click
+document.getElementById('viewPlayersBtn').addEventListener('click', function() {
+  const playerX = localStorage.getItem('playerX');
+  const playerO = localStorage.getItem('playerO');
+
+  const msgContainer = document.getElementById('playerNamesMsg');
+  
   if (playerX && playerO) {
     msgContainer.classList.remove('hidden');
     msgContainer.innerText = `Player X: ${playerX} | Player O: ${playerO}`;
   } else {
     msgContainer.classList.remove('hidden');
-    msgContainer.innerText = 'Player names are not set yet! Please go to the landing page to enter names.';
+    msgContainer.innerText = 'Player names are not set yet!';
   }
 });
