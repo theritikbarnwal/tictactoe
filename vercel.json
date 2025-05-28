@@ -2,15 +2,15 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/landing.html"
-    },
-    {
-      "source": "/index",
       "destination": "/index.html"
     },
     {
-      "source": "/:path*",
+      "source": "/landing",
       "destination": "/landing.html"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
     }
   ],
   "cleanUrls": false,
