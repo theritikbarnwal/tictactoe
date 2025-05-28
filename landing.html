@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe Game</title>
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="landingStyle.css">
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-indigo-950 to-black min-h-screen flex items-center justify-center text-white">
+
+  <div class="text-center p-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl max-w-md opacity-0 funky-animate">
+    <h1 class="text-5xl font-extrabold mb-6 text-indigo-400 animate-bounce">Tic Tac Toe</h1>
+    <p class="text-base text-gray-300 mb-8">Enter player names to begin the game of Xs and Os!</p>
+
+    <form id="playerForm" class="space-y-4">
+      <input type="text" id="playerX" placeholder="Player X Name" required
+             class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+      <input type="text" id="playerO" placeholder="Player O Name" required
+             class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+      <button type="submit"
+              class="w-full mt-4 text-xl px-8 py-4 bg-indigo-600 text-white font-bold rounded-full transition-all duration-500 ease-in-out transform hover:scale-110 hover:bg-indigo-500  shadow-lg shadow-indigo-700">
+        Start Game
+      </button>
+    </form>
+  </div>
+  <script src="landing.js">
+  </script>
+
+</body>
+</html>
