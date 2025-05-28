@@ -1,66 +1,107 @@
-Tic Tac Toe - Web Technology Project 🎮
-Overview 🌟
-This is a Tic Tac Toe web application developed as a Web Technology Project by a team of three students. The game allows two players to compete by taking turns placing their symbols (X or O) on a 3x3 grid, with the goal of aligning three symbols horizontally, vertically, or diagonally. The project uses HTML, CSS (with Tailwind CSS), and JavaScript to create an interactive and visually appealing game with a landing page for entering player names. 🕹️
-Features ✨
 
-Player Name Input 📝: Players can enter their names on a landing page, which are saved using localStorage and displayed during the game.
-Interactive Game Board 🟦: A 3x3 grid where players take turns placing X or O.
-Win/Draw Detection 🏆: Automatically detects a winner or a draw based on standard Tic Tac Toe rules.
-Game Controls 🎯: Includes "New Game" and "Reset" buttons to start or clear the game.
-Responsive Design 📱: Built with Tailwind CSS for a modern, responsive UI that works on various devices.
-Animations 🎨: Custom animations (funkyFade) and hover effects (glow) enhance the user experience.
-Player Name Display 👥: A "View Players" button shows the saved player names.
+# 🎮 Tic Tac Toe – Web Technology Project
 
-Technologies Used 🛠️
+A fun and interactive **Tic Tac Toe** web application built as a Web Technology project by a team of three students. Two players can compete by taking turns to place their symbols (X or O) on a 3x3 grid. The first to align three symbols horizontally, vertically, or diagonally wins!
 
-HTML5 📄: Structure for the landing and game pages.
-CSS3 🎨: Styling with Tailwind CSS (output.css) and custom animations (landingStyle.css).
-JavaScript 💻: Game logic, form handling, and local storage for player names.
-Tailwind CSS 🌈: Utility-first CSS framework for responsive and modern styling.
+---
 
-File Structure 📂
-├── index.html          # Main game page with the Tic Tac Toe board 🟰
-├── landing.html        # Landing page for entering player names 📋
-├── script.js           # Game logic and event handling for the game page ⚙️
-├── landing.js          # Form submission logic for the landing page 📥
-├── output.css          # Compiled Tailwind CSS styles 🎨
-├── landingStyle.css    # Custom animations and hover effects ✨
-├── input.css           # Tailwind CSS input file for build process 🛠️
+## 🌟 Features
 
-Setup Instructions 🚀
+- **📝 Player Name Input**  
+  Landing page to enter and save player names using `localStorage`.
 
-Clone the Repository 📥:
+- **🟦 Interactive Game Board**  
+  A responsive 3x3 grid for players to place X or O by clicking cells.
+
+- **🏆 Win/Draw Detection**  
+  Automatically detects when a player wins or if the game ends in a draw.
+
+- **🎯 Game Controls**  
+  - `New Game`: Starts a fresh game.
+  - `Reset`: Clears the current board.
+
+- **📱 Responsive Design**  
+  Built using **Tailwind CSS** for compatibility across all screen sizes.
+
+- **🎨 Animations**  
+  Includes custom animations like `funkyFade` and glow effects on hover.
+
+- **👥 Player Name Display**  
+  A "View Players" button shows currently saved player names.
+
+---
+
+## 🛠️ Technologies Used
+
+- **HTML5** – Structure for landing and game pages  
+- **CSS3** – Styling with:
+  - Tailwind CSS (`output.css`)
+  - Custom animations (`landingStyle.css`)  
+- **JavaScript** – Logic, game flow, and localStorage integration  
+- **Tailwind CSS** – Utility-first framework for modern UI
+
+---
+
+## 📂 File Structure
+
+```
+tic-tac-toe/
+├── index.html           # Main game page with the Tic Tac Toe board
+├── landing.html         # Landing page for entering player names
+├── script.js            # Game logic and event handling
+├── landing.js           # Player name form handling
+├── output.css           # Compiled Tailwind CSS
+├── landingStyle.css     # Custom animations and effects
+├── input.css            # Tailwind source file for building output.css
+```
+
+---
+
+## 🚀 Setup Instructions
+
+### 1️⃣ Clone the Repository
+
+```bash
 git clone <repository-url>
 cd tic-tac-toe
+```
 
+### 2️⃣ Open the Application
 
-Open the Application 🌐:
+- Open `landing.html` in a web browser to enter player names.
+- Or open `index.html` directly if names are already saved in `localStorage`.
 
-Open landing.html in a web browser to enter player names. 🖱️
-Alternatively, open index.html directly if player names are already set in localStorage. 🎲
+### 3️⃣ (Optional) Modify & Build Tailwind CSS
 
+Ensure Node.js is installed, then:
 
-Optional: Build Tailwind CSS (if modifying styles) 🛠️:
-
-Ensure Node.js is installed. 🔧
-Install Tailwind CSS:npm install -D tailwindcss
+```bash
+npm install -D tailwindcss
 npx tailwindcss init
+npx tailwindcss -i input.css -o output.css
+```
 
+---
 
-Build output.css from input.css:npx tailwindcss -i input.css -o output.css
+## 🎲 How to Play
 
+1. Open `landing.html` and enter names for **Player X** and **Player O**.
+2. Click **Start Game** to save names and launch the game board.
+3. Players take turns to click grid cells to place X or O.
+4. Game will announce a **win** or a **draw** automatically.
+5. Use:
+   - **New Game** to restart the match.
+   - **Reset** to clear the board.
+6. Click **View Players** to view saved names.
 
-How to Play 🎲
+---
 
-Open landing.html and enter names for Player X and Player O. ✍️
-Click "Start Game" to save names and redirect to the game board (index.html). 🚀
-Take turns clicking the 3x3 grid to place X or O. 🟥
-The game detects a win or draw and displays a message. 🥳
-Use the "New Game" button to start a new game (if the current game is over) or "Reset" to clear the board. 🔄
-Click "View Players" to see the saved player names. 👀
+## 👨‍💻 Team Members
 
-Team Members 👨‍💻
+- **Ritik Barnwal** (23DBCAD078) 🌟  
+- **Prashant Saud** (23DBCAD071) 🌟  
+- **Prashant Raj** (23DBCAD070) 🌟
 
-Ritik Barnwal (23DBCAD078) 🌟
-Prashant Saud (23DBCAD071) 🌟
-Prashant Raj (23DBCAD070) 🌟
+---
+
+Enjoy the game! 🎉
