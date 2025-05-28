@@ -53,6 +53,7 @@ tic-tac-toe/
 ├── output.css           # Compiled Tailwind CSS
 ├── landingStyle.css     # Custom animations and effects
 ├── input.css            # Tailwind source file for building output.css
+├── vercel.json          # platform for cloud hosting 
 ```
 
 ---
