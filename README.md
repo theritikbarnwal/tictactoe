@@ -99,10 +99,9 @@ npx tailwindcss -i input.css -o output.css
 
 ## 👨‍💻 Team Members
 
-- **Ritik Barnwal** (23DBCAD078) 🌟  
-- **Prashant Saud** (23DBCAD071) 🌟  
-- **Prashant Raj** (23DBCAD070) 🌟
-
+- **Ritik Barnwal**  
+- **Prashant Saud**  
+- **Prashant Raj**
 ---
 
 Enjoy the game! 🎉
