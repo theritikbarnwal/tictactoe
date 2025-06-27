@@ -96,7 +96,7 @@ npx tailwindcss -i input.css -o output.css
 
 ---
 
-## 👨‍💻 Team Members
+## 👨‍💻 Team Members College Group Project
 
 - **Ritik Barnwal** (23DBCAD078) 🌟  
 - **Prashant Saud** (23DBCAD071) 🌟  
